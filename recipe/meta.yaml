@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "c6117a4ca0ec404ac31c28a4baa21b4a3031f0a6d635efee023d46b20de15be3"
+  sha256: "efb9db25c6a823d318edef09fa2a827aaabc1363e588479c4d6136d5411bfa1d"
 
 build:
   number: 0
@@ -39,9 +39,13 @@ test:
     - pytest_notebook.execution
     - pytest_notebook.ipy_magic
     - pytest_notebook.nb_regression
+    - pytest_notebook.notebook
     - pytest_notebook.plugin
     - pytest_notebook.post_processors
+    - pytest_notebook.resources
     - pytest_notebook.utils
+  commands:
+    - pytest -h
 
 about:
   home: "https://github.com/chrisjsewell/pytest-notebook"
