@@ -32,14 +32,20 @@ requirements:
     - python >=3.5
 
 test:
-  requires:
-    - pytest-regressions
-  source_files:
-    - tests
   imports:
     - pytest_notebook
+    - pytest_notebook.diffing
+    - pytest_notebook.example_nbs
+    - pytest_notebook.execution
+    - pytest_notebook.ipy_magic
+    - pytest_notebook.nb_regression
+    - pytest_notebook.notebook
+    - pytest_notebook.plugin
+    - pytest_notebook.post_processors
+    - pytest_notebook.resources
+    - pytest_notebook.utils
   commands:
-    - pytest tests
+    - pytest -h
 
 about:
   home: "https://github.com/chrisjsewell/pytest-notebook"
