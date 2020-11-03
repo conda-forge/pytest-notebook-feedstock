@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
     - setuptools
   run:
     - attrs
@@ -29,7 +29,7 @@ requirements:
     - nbdime
     - nbformat
     - pytest >=3.5.0
-    - python
+    - python >=3.5
 
 test:
   imports:
