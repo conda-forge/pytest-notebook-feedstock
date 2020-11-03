@@ -10,7 +10,7 @@ source:
   sha256: 2602c93af0431f35d1033525bda0f15b336ec995e36aac83c0403d75ad0a1f46
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -49,7 +49,7 @@ test:
 
 about:
   home: https://github.com/chrisjsewell/pytest-notebook
-  license: BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: A pytest plugin for testing Jupyter Notebooks
@@ -58,3 +58,4 @@ about:
 extra:
   recipe-maintainers:
     - chrisjsewell
+    - xmnlab

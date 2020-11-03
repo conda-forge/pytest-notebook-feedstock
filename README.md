@@ -3,13 +3,13 @@ About pytest-notebook
 
 Home: https://github.com/chrisjsewell/pytest-notebook
 
-Package license: BSD
+Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytest-notebook-feedstock/blob/master/LICENSE.txt)
 
 Summary: A pytest plugin for testing Jupyter Notebooks
 
-
+Documentation: https://pytest-notebook.readthedocs.io
 
 Current build status
 ====================
@@ -117,4 +117,5 @@ Feedstock Maintainers
 =====================
 
 * [@chrisjsewell](https://github.com/chrisjsewell/)
+* [@xmnlab](https://github.com/xmnlab/)
 
