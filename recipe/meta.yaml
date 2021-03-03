@@ -10,7 +10,7 @@ source:
   sha256: 2602c93af0431f35d1033525bda0f15b336ec995e36aac83c0403d75ad0a1f46
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -27,7 +27,7 @@ requirements:
     - jupyter_client
     - nbconvert
     - nbdime
-    - nbformat
+    - nbformat <6
     - pytest >=3.5.0
     - python >=3.5
 
