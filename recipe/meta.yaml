@@ -1,5 +1,5 @@
 {% set name = "pytest-notebook" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2602c93af0431f35d1033525bda0f15b336ec995e36aac83c0403d75ad0a1f46
+  sha256: b1dc5c1b86209bd47b2ea6ee214467fba57102ef1e88903ea56f86625e37f403
 
 build:
   number: 2
@@ -17,19 +17,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
-    - setuptools
+    - python >=3.7
+    - flit >=3.2,<4
   run:
     - attrs
     - black
-    - importlib_resources
     - jsonschema
-    - jupyter_client
-    - nbconvert
+    - nbclient ~=0.5.10
     - nbdime
-    - nbformat <6
+    - nbformat
     - pytest >=3.5.0
-    - python >=3.5
+    - python >=3.7
 
 test:
   imports:
