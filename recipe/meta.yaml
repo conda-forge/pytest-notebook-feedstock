@@ -1,4 +1,4 @@
-{% set name = "pytest-notebook" %}
+{% set name = "pytest_notebook" %}
 {% set version = "0.7.0" %}
 
 package:
