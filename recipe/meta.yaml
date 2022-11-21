@@ -1,5 +1,5 @@
 {% set name = "pytest_notebook" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b1dc5c1b86209bd47b2ea6ee214467fba57102ef1e88903ea56f86625e37f403
+  sha256: f7bf003049e01f8dfa95a46841d1e40f6f4c78836f1f4119c6a68d96f7c628fe
 
 build:
   number: 0
