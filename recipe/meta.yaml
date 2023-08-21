@@ -28,6 +28,7 @@ requirements:
     - nbformat
     - pytest >=3.5.0
     - python >=3.7
+    - importlib-resources ~=5.0
 
 test:
   imports:
