@@ -13,43 +13,42 @@ build:
   number: 1
 
 outputs:
-- name: pytest_notebook
-  build:
-    noarch: python
-    script: 'python -m pip install . --no-deps --ignore-installed -vv '
-  requirements:
-    host:
-    - pip
-    - python >=3.7
-    - flit >=3.2,<4
-    run:
-    - attrs
-    - black
-    - jsonschema
-    - nbclient ~=0.5.10
-    - nbdime
-    - nbformat
-    - pytest >=3.5.0
-    - python >=3.7
-    - importlib-resources ~=5.0
-  test:
-    requires:
-    - pip
-    imports:
-    - pytest_notebook
-    commands:
-    - pip check
-    - pytest -h
-
-- name: pytest-notebook
-  build:
-    noarch: python
-  requirements:
-    run:
-    - {{ pin_subpackage('pytest_notebook', exact=True) }}
-  test:
-    imports:
-    - pytest_notebook
+  - name: pytest_notebook
+    build:
+      noarch: python
+      script: 'python -m pip install . --no-deps --ignore-installed -vv '
+    requirements:
+      host:
+        - pip
+        - python >=3.7
+        - flit >=3.2,<4
+      run:
+        - attrs
+        - black
+        - jsonschema
+        - nbclient ~=0.5.10
+        - nbdime
+        - nbformat
+        - pytest >=3.5.0
+        - python >=3.7
+        - importlib-resources ~=5.0
+    test:
+      requires:
+        - pip
+      imports:
+        - pytest_notebook
+      commands:
+        - pip check
+        - pytest -h
+  - name: pytest-notebook
+    build:
+      noarch: python
+    requirements:
+      run:
+        - {{ pin_subpackage('pytest_notebook', exact=True) }}
+    test:
+      imports:
+        - pytest_notebook
 
 about:
   home: https://github.com/chrisjsewell/pytest-notebook
