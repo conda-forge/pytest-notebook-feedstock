@@ -29,6 +29,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pytest--notebook-green.svg)](https://anaconda.org/conda-forge/pytest-notebook) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytest-notebook.svg)](https://anaconda.org/conda-forge/pytest-notebook) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytest-notebook.svg)](https://anaconda.org/conda-forge/pytest-notebook) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytest-notebook.svg)](https://anaconda.org/conda-forge/pytest-notebook) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pytest_notebook-green.svg)](https://anaconda.org/conda-forge/pytest_notebook) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytest_notebook.svg)](https://anaconda.org/conda-forge/pytest_notebook) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytest_notebook.svg)](https://anaconda.org/conda-forge/pytest_notebook) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytest_notebook.svg)](https://anaconda.org/conda-forge/pytest_notebook) |
 
 Installing pytest_notebook
@@ -41,41 +42,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pytest_notebook` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `pytest-notebook, pytest_notebook` can be installed with `conda`:
 
 ```
-conda install pytest_notebook
-```
-
-or with `mamba`:
-
-```
-mamba install pytest_notebook
-```
-
-It is possible to list all of the versions of `pytest_notebook` available on your platform with `conda`:
-
-```
-conda search pytest_notebook --channel conda-forge
+conda install pytest-notebook pytest_notebook
 ```
 
 or with `mamba`:
 
 ```
-mamba search pytest_notebook --channel conda-forge
+mamba install pytest-notebook pytest_notebook
+```
+
+It is possible to list all of the versions of `pytest-notebook` available on your platform with `conda`:
+
+```
+conda search pytest-notebook --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search pytest-notebook --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search pytest_notebook --channel conda-forge
+mamba repoquery search pytest-notebook --channel conda-forge
 
-# List packages depending on `pytest_notebook`:
-mamba repoquery whoneeds pytest_notebook --channel conda-forge
+# List packages depending on `pytest-notebook`:
+mamba repoquery whoneeds pytest-notebook --channel conda-forge
 
-# List dependencies of `pytest_notebook`:
-mamba repoquery depends pytest_notebook --channel conda-forge
+# List dependencies of `pytest-notebook`:
+mamba repoquery depends pytest-notebook --channel conda-forge
 ```
 
 
