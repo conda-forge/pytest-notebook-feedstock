@@ -1,5 +1,5 @@
 {% set name = "pytest_notebook" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: pytest_notebook
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f7bf003049e01f8dfa95a46841d1e40f6f4c78836f1f4119c6a68d96f7c628fe
+  sha256: eea3e8ba7b0232e84a0c8ce72e02a7c28bc5a340ea41e61d97c6f05b8813d665
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: pytest_notebook
@@ -40,12 +40,14 @@ outputs:
       commands:
         - pip check
         - pytest -h
+
+  # see https://github.com/conda-forge/importlib_metadata-feedstock/blob/main/recipe/meta.yaml
   - name: pytest-notebook
     build:
-      noarch: python
+      noarch: generic
     requirements:
       run:
-        - {{ pin_subpackage('pytest_notebook', exact=True) }}
+        - {{ pin_subpackage('pytest_notebook', max_pin="x.x.x") }}
     test:
       imports:
         - pytest_notebook
