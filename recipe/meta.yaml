@@ -2,7 +2,7 @@
 {% set version = "0.8.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: pytest_notebook
   version: {{ version }}
 
 source:
@@ -13,7 +13,7 @@ build:
   number: 1
 
 outputs:
-- name: pytest-notebook
+- name: pytest_notebook
   build:
     noarch: python
     script: 'python -m pip install . --no-deps --ignore-installed -vv '
@@ -41,12 +41,12 @@ outputs:
     - pip check
     - pytest -h
 
-- name: pytest_notebook
+- name: pytest-notebook
   build:
     noarch: python
   requirements:
     run:
-    - {{ pin_subpackage('pytest-notebook', max_pin="x.x.x") }}
+    - {{ pin_subpackage('pytest_notebook', exact=True) }}
   test:
     imports:
     - pytest_notebook
