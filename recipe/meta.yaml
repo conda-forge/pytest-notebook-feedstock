@@ -11,11 +11,12 @@ source:
 
 build:
   number: 1
-  noarch: python
-  script: 'python -m pip install . --no-deps --ignore-installed -vv '
 
 outputs:
 - name: pytest-notebook
+  build:
+    noarch: python
+    script: 'python -m pip install . --no-deps --ignore-installed -vv '
   requirements:
     host:
     - pip
@@ -32,14 +33,17 @@ outputs:
     - python >=3.7
     - importlib-resources ~=5.0
   test:
+    requires:
+    - pip
     imports:
     - pytest_notebook
     commands:
+    - pip check
     - pytest -h
 
 - name: pytest_notebook
   build:
-    noarch: generic
+    noarch: python
   requirements:
     run:
     - {{ pin_subpackage('pytest-notebook', max_pin="x.x.x") }}
