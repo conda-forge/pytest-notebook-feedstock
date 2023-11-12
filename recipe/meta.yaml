@@ -37,15 +37,15 @@ outputs:
     commands:
     - pytest -h
 
-  - name: pytest_notebook
-    build:
-      noarch: generic
-    requirements:
-      run:
-        - {{ pin_subpackage('pytest-notebook', max_pin="x.x.x") }}
-    test:
-      imports:
-        - pytest_notebook
+- name: pytest_notebook
+  build:
+    noarch: generic
+  requirements:
+    run:
+    - {{ pin_subpackage('pytest-notebook', max_pin="x.x.x") }}
+  test:
+    imports:
+    - pytest_notebook
 
 about:
   home: https://github.com/chrisjsewell/pytest-notebook
