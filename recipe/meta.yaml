@@ -27,7 +27,7 @@ outputs:
         - black
         - jsonschema
         - nbclient ~=0.5.10
-        - nbdime
+        - nbdime>=4
         - nbformat
         - pytest >=3.5.0
         - python >=3.7
