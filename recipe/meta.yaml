@@ -10,7 +10,7 @@ source:
   sha256: 0a38a73b04c40137402b5f39a053395b418028cb3994a04dbcffe603c7b2a646
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: pytest_notebook
@@ -27,7 +27,7 @@ outputs:
         - black
         - jsonschema
         - nbclient ~=0.5.10
-        - nbdime
+        - nbdime>=4
         - nbformat
         - pytest >=3.5.0
         - python >=3.7
